@@ -1,0 +1,378 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* elogia_base
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e-20221210\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-10 11:34+0000\n"
+"PO-Revision-Date: 2023-04-10 11:34+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: elogia_base
+#: model_terms:ir.ui.view,arch_db:elogia_base.report_invoice_document
+msgid "<b>Description: </b>"
+msgstr "<b>Descripción: </b>"
+
+#. module: elogia_base
+#: model_terms:ir.ui.view,arch_db:elogia_base.report_invoice_document
+msgid "<strong>Fiscal Folio:</strong>"
+msgstr "<strong>Folio Fiscal:</strong>"
+
+#. module: elogia_base
+#: model:ir.model.fields,field_description:elogia_base.field_res_partner__property_account_passive_id
+#: model:ir.model.fields,field_description:elogia_base.field_res_users__property_account_passive_id
+msgid "Account Passive"
+msgstr "Cuenta tipo pasivo"
+
+#. module: elogia_base
+#: model:ir.model,name:elogia_base.model_account_asset
+msgid "Asset/Revenue Recognition"
+msgstr "Reconocimiento de pagos/ingresos"
+
+#. module: elogia_base
+#: model:ir.model.fields,field_description:elogia_base.field_account_asset__partner_id
+msgid "Assigned to"
+msgstr "Asignado a"
+
+#. module: elogia_base
+#: model:ir.model.fields.selection,name:elogia_base.selection__res_partner__third_party__company
+msgid "Associated companies"
+msgstr "Empresa Asociada"
+
+#. module: elogia_base
+#: model:ir.model.fields,field_description:elogia_base.field_res_partner__other_bank_id
+#: model:ir.model.fields,field_description:elogia_base.field_res_users__other_bank_id
+msgid "Bank payments"
+msgstr "Banco destinatario"
+
+#. module: elogia_base
+#: model:ir.model,name:elogia_base.model_bank_rec_widget
+msgid "Bank reconciliation widget for a single statement line"
+msgstr ""
+"Widget de conciliación bancaria para una sola línea del estado de cuenta"
+
+#. module: elogia_base
+#: model:ir.model.fields,field_description:elogia_base.field_setting_type_journal__company_id
+#: model_terms:ir.ui.view,arch_db:elogia_base.setting_type_journal_search
+msgid "Company"
+msgstr "Compañía"
+
+#. module: elogia_base
+#: model:ir.model.fields,field_description:elogia_base.field_res_partner__company_bank_ids
+#: model:ir.model.fields,field_description:elogia_base.field_res_users__company_bank_ids
+msgid "Company Bank"
+msgstr "Bancos de la compañia"
+
+#. module: elogia_base
+#: model:ir.model,name:elogia_base.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: elogia_base
+#: model:ir.model.fields.selection,name:elogia_base.selection__setting_type_journal__type_journal__convencional
+#: model_terms:ir.ui.view,arch_db:elogia_base.setting_type_journal_search
+msgid "Convencional"
+msgstr "Convencional"
+
+#. module: elogia_base
+#: model_terms:ir.actions.act_window,help:elogia_base.action_payment_mode_client
+msgid "Create a payment mode!"
+msgstr "Crea un método de pago"
+
+#. module: elogia_base
+#: model_terms:ir.actions.act_window,help:elogia_base.action_setting_type_journal
+#: model_terms:ir.actions.act_window,help:elogia_base.action_setting_type_journal_accounting
+msgid "Create a type journal!"
+msgstr "Crea un tipo de diario"
+
+#. module: elogia_base
+#: model:ir.model.fields,field_description:elogia_base.field_payment_mode_client__create_uid
+#: model:ir.model.fields,field_description:elogia_base.field_setting_type_journal__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: elogia_base
+#: model:ir.model.fields,field_description:elogia_base.field_payment_mode_client__create_date
+#: model:ir.model.fields,field_description:elogia_base.field_setting_type_journal__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: elogia_base
+#: model:ir.model.fields.selection,name:elogia_base.selection__res_partner__third_party__creditor
+msgid "Creditors"
+msgstr "Acreedor"
+
+#. module: elogia_base
+#: model:ir.model.fields,field_description:elogia_base.field_setting_type_journal__check_default
+msgid "Default"
+msgstr "Por defecto"
+
+#. module: elogia_base
+#: model:ir.model.fields,field_description:elogia_base.field_sale_order__department_id
+msgid "Department"
+msgstr "Departamento"
+
+#. module: elogia_base
+#: model:ir.model.fields,field_description:elogia_base.field_payment_mode_client__display_name
+#: model:ir.model.fields,field_description:elogia_base.field_setting_type_journal__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: elogia_base
+#: model:ir.model.fields,field_description:elogia_base.field_account_move_line__employee_id
+#: model:ir.model.fields,field_description:elogia_base.field_account_reconcile_model_line__employee_id
+#: model:ir.model.fields,field_description:elogia_base.field_bank_rec_widget__form_employee_id
+msgid "Employee"
+msgstr "Empleado"
+
+#. module: elogia_base
+#: model:ir.model.fields.selection,name:elogia_base.selection__res_partner__third_party__employee
+msgid "Employees"
+msgstr "Empleado"
+
+#. module: elogia_base
+#: model:ir.model.fields,field_description:elogia_base.field_account_bank_statement_line__fiscal_folio
+#: model:ir.model.fields,field_description:elogia_base.field_account_move__fiscal_folio
+#: model:ir.model.fields,field_description:elogia_base.field_account_payment__fiscal_folio
+msgid "Folio Fiscal"
+msgstr "Folio Fiscal"
+
+#. module: elogia_base
+#: model:ir.model.fields,help:elogia_base.field_account_bank_statement_line__fiscal_folio
+#: model:ir.model.fields,help:elogia_base.field_account_move__fiscal_folio
+#: model:ir.model.fields,help:elogia_base.field_account_payment__fiscal_folio
+msgid "Folio in electronic invoice, is returned by SAT when send to stamp."
+msgstr "Folio en factura electrónica, es devuelto por el SAT al enviar a timbre."
+
+#. module: elogia_base
+#: model_terms:ir.ui.view,arch_db:elogia_base.setting_type_journal_search
+msgid "Group By"
+msgstr "Agrupar por"
+
+#. module: elogia_base
+#: model:ir.model.fields.selection,name:elogia_base.selection__res_partner__third_party__group
+msgid "Group company"
+msgstr "Empresa del Grupo"
+
+#. module: elogia_base
+#: model:ir.model.fields,field_description:elogia_base.field_payment_mode_client__id
+#: model:ir.model.fields,field_description:elogia_base.field_setting_type_journal__id
+msgid "ID"
+msgstr "ID"
+
+#. module: elogia_base
+#: model:ir.model.fields.selection,name:elogia_base.selection__setting_type_journal__type_journal__intercompany
+#: model_terms:ir.ui.view,arch_db:elogia_base.setting_type_journal_search
+msgid "Intercompany"
+msgstr "Intercompany"
+
+#. module: elogia_base
+#: model:ir.model.fields,field_description:elogia_base.field_setting_type_journal__journal_id
+#: model_terms:ir.ui.view,arch_db:elogia_base.setting_type_journal_search
+msgid "Journal"
+msgstr "Diario"
+
+#. module: elogia_base
+#: model:ir.model,name:elogia_base.model_account_move
+msgid "Journal Entry"
+msgstr "Asiento contable"
+
+#. module: elogia_base
+#: model:ir.model,name:elogia_base.model_account_move_line
+msgid "Journal Item"
+msgstr "Apunte contable"
+
+#. module: elogia_base
+#: model:ir.model.fields,field_description:elogia_base.field_setting_type_journal__type_journal
+msgid "Journal type"
+msgstr "Tipo diario"
+
+#. module: elogia_base
+#: model:ir.model.fields,field_description:elogia_base.field_payment_mode_client____last_update
+#: model:ir.model.fields,field_description:elogia_base.field_setting_type_journal____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: elogia_base
+#: model:ir.model.fields,field_description:elogia_base.field_payment_mode_client__write_uid
+#: model:ir.model.fields,field_description:elogia_base.field_setting_type_journal__write_uid
+msgid "Last Updated by"
+msgstr "Última modificación por"
+
+#. module: elogia_base
+#: model:ir.model.fields,field_description:elogia_base.field_payment_mode_client__write_date
+#: model:ir.model.fields,field_description:elogia_base.field_setting_type_journal__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: elogia_base
+#: model:ir.model.fields,field_description:elogia_base.field_payment_mode_client__name
+#: model:ir.model.fields,field_description:elogia_base.field_setting_type_journal__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: elogia_base
+#: model:ir.model.fields,field_description:elogia_base.field_account_bank_statement_line__description
+#: model:ir.model.fields,field_description:elogia_base.field_account_move__description
+#: model:ir.model.fields,field_description:elogia_base.field_account_payment__description
+#: model:ir.model.fields,field_description:elogia_base.field_sale_order__description
+msgid "Notes"
+msgstr "Notas"
+
+#. module: elogia_base
+#: model:ir.model.fields,field_description:elogia_base.field_account_bank_statement_line__ref_previous
+#: model:ir.model.fields,field_description:elogia_base.field_account_move__ref_previous
+#: model:ir.model.fields,field_description:elogia_base.field_account_payment__ref_previous
+msgid "Other reference"
+msgstr "Ref. anterior"
+
+#. module: elogia_base
+#: model_terms:ir.ui.view,arch_db:elogia_base.setting_type_journal_search
+msgid "Others"
+msgstr "Otros"
+
+#. module: elogia_base
+#: model:ir.model.fields,field_description:elogia_base.field_account_bank_statement_line__category_id
+#: model:ir.model.fields,field_description:elogia_base.field_account_move__category_id
+#: model:ir.model.fields,field_description:elogia_base.field_account_payment__category_id
+msgid "Partner tags"
+msgstr "Categoría cliente/proveedor"
+
+#. module: elogia_base
+#: model:ir.model,name:elogia_base.model_payment_mode_client
+msgid "Payment Mode"
+msgstr "Método de pago"
+
+#. module: elogia_base
+#: model:ir.actions.act_window,name:elogia_base.action_payment_mode_client
+#: model:ir.ui.menu,name:elogia_base.sale_order_payment_mode_elogia_menu
+#: model_terms:ir.ui.view,arch_db:elogia_base.payment_mode_client_form
+#: model_terms:ir.ui.view,arch_db:elogia_base.payment_mode_client_tree
+msgid "Payment mode"
+msgstr "Método de pago"
+
+#. module: elogia_base
+#: model:ir.model.fields,field_description:elogia_base.field_account_bank_statement_line__payment_supplier_id
+#: model:ir.model.fields,field_description:elogia_base.field_account_move__payment_supplier_id
+#: model:ir.model.fields,field_description:elogia_base.field_account_payment__payment_supplier_id
+msgid "Payment mode (Purchase)"
+msgstr "Método pago(Compras)"
+
+#. module: elogia_base
+#: model:ir.model.fields,field_description:elogia_base.field_res_partner__payment_supplier_id
+#: model:ir.model.fields,field_description:elogia_base.field_res_users__payment_supplier_id
+msgid "Payment mode (Purchases)"
+msgstr "Método pago(Compras)"
+
+#. module: elogia_base
+#: model:ir.model.fields,field_description:elogia_base.field_account_bank_statement_line__payment_mode_id
+#: model:ir.model.fields,field_description:elogia_base.field_account_move__payment_mode_id
+#: model:ir.model.fields,field_description:elogia_base.field_account_payment__payment_mode_id
+#: model:ir.model.fields,field_description:elogia_base.field_res_partner__payment_id
+#: model:ir.model.fields,field_description:elogia_base.field_res_users__payment_id
+msgid "Payment mode (Sales)"
+msgstr "Método pago(Ventas)"
+
+#. module: elogia_base
+#: model_terms:ir.ui.view,arch_db:elogia_base.setting_type_journal_search
+msgid "Purchase"
+msgstr "Compra"
+
+#. module: elogia_base
+#: model_terms:ir.ui.view,arch_db:elogia_base.view_move_form_inherit_elogia_base
+msgid "Ref."
+msgstr "Ref."
+
+#. module: elogia_base
+#: model:ir.model,name:elogia_base.model_account_reconcile_model_line
+msgid "Rules for the reconciliation model"
+msgstr "Reglas para el modelo de conciliación"
+
+#. module: elogia_base
+#: model_terms:ir.ui.view,arch_db:elogia_base.setting_type_journal_search
+msgid "Sale"
+msgstr "Venta"
+
+#. module: elogia_base
+#: model:ir.model,name:elogia_base.model_sale_order
+msgid "Sales Order"
+msgstr "Pedido de venta"
+
+#. module: elogia_base
+#: model:ir.model.fields,help:elogia_base.field_setting_type_journal__type
+msgid ""
+"Select 'Sale' for customer invoices journals.\n"
+"Select 'Purchase' for vendor bills journals.\n"
+"Select 'Cash' or 'Bank' for journals that are used in customer or vendor payments.\n"
+"Select 'General' for miscellaneous operations journals."
+msgstr ""
+"Selecciona 'Venta' para diarios de Factura de cliente.\n"
+"Selecciona 'Compra' para diarios de Factura de proveedor.\n"
+"Selecciona 'Efectivo' o 'Banco' para diarios que se utilizan en pagos de clientes o proveedores.\n"
+"Selecciona 'General' para diarios de operaciones misceláneas."
+
+#. module: elogia_base
+#: model_terms:ir.ui.view,arch_db:elogia_base.report_invoice_document
+msgid "Send your payment to:"
+msgstr "Envía tus pagos a:"
+
+#. module: elogia_base
+#: model:ir.model,name:elogia_base.model_setting_type_journal
+msgid "Setting Type Journal"
+msgstr "Setting Type Journal"
+
+#. module: elogia_base
+#. odoo-python
+#: code:addons/elogia_base/models/res_partner.py:0
+#: code:addons/elogia_base/models/res_partner.py:0
+#, python-format
+msgid "There is already a contact with the same VAT: {}."
+msgstr "Ya existe un contacto con el mismo VAT: {}."
+
+#. module: elogia_base
+#: model:ir.model.fields,field_description:elogia_base.field_res_partner__third_party
+#: model:ir.model.fields,field_description:elogia_base.field_res_users__third_party
+msgid "Third party"
+msgstr "Tercero"
+
+#. module: elogia_base
+#: model:ir.model.constraint,message:elogia_base.constraint_setting_type_journal_journal_type_unique
+msgid "This journal already has a related type journal!"
+msgstr "Este diario ya tiene un tipo relacionado"
+
+#. module: elogia_base
+#: model:ir.model.fields,field_description:elogia_base.field_res_partner__trade_name
+#: model:ir.model.fields,field_description:elogia_base.field_res_users__trade_name
+#: model_terms:ir.ui.view,arch_db:elogia_base.view_partner_form_inherited_elogia
+msgid "Trade name"
+msgstr "Nombre comercial"
+
+#. module: elogia_base
+#: model:ir.model.fields,field_description:elogia_base.field_setting_type_journal__type
+#: model_terms:ir.ui.view,arch_db:elogia_base.setting_type_journal_search
+msgid "Type"
+msgstr "Tipo"
+
+#. module: elogia_base
+#: model:ir.actions.act_window,name:elogia_base.action_setting_type_journal
+#: model:ir.actions.act_window,name:elogia_base.action_setting_type_journal_accounting
+#: model:ir.model.fields,field_description:elogia_base.field_sale_order__type_journal_id
+#: model:ir.ui.menu,name:elogia_base.account_type_journal_accounting_elogia_menu
+#: model:ir.ui.menu,name:elogia_base.sale_order_type_journal_elogia_menu
+#: model_terms:ir.ui.view,arch_db:elogia_base.setting_type_journal_form
+#: model_terms:ir.ui.view,arch_db:elogia_base.setting_type_journal_search
+#: model_terms:ir.ui.view,arch_db:elogia_base.setting_type_journal_tree
+msgid "Type journal"
+msgstr "Tipo diario"
+
+#. module: elogia_base
+#: model:ir.model.fields.selection,name:elogia_base.selection__res_partner__third_party__vendor
+msgid "Vendors"
+msgstr "Proveedor"

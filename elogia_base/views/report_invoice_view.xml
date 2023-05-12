@@ -1,0 +1,38 @@
+<odoo>
+    <data>
+        <template id="report_invoice_document" inherit_id="account.report_invoice_document">
+            <xpath expr="//div[@name='origin']" position="replace"/>
+            <xpath expr="//span[@t-field='line.product_uom_id']" position="replace"/>
+            <xpath expr="//p[@name='payment_communication']" position="before">
+                <p t-if="o.description" name="description_add" class="mt-4">
+                    <b>Description: </b> <span t-field="o.description"/>
+                </p>
+            </xpath>
+            <xpath expr="//p[@name='payment_communication']" position="after">
+                <t t-if="o.move_type in ('out_invoice', 'in_refund')" name="partner_id" class="mt-4">
+                    <p>Send your payment to:</p>
+                    <t t-if="o.partner_id.other_bank_id">
+                        <p t-esc="o.partner_id.other_bank_id.acc_number" style="font-size: 14px; font-weight: bold;"/>
+                    </t>
+                    <t t-else="">
+                        <t t-foreach="o.company_id.bank_ids" t-as="each">
+                            <p t-esc="each.acc_number" style="font-size: 14px; font-weight: bold;"/>
+                        </t>
+                    </t>
+                </t>
+            </xpath>
+            <xpath expr="//table[@name='invoice_line_table']" position="before">
+                <t t-if="is_cfdi_signed">
+                    <t t-set="original_o_grid_layout" t-value="o_grid_layout"/>
+                    <t t-set="o_grid_layout" t-value="'col-auto col-3 mw-100 mb-2'"/>
+                    <t t-if="o.fiscal_folio">
+                        <div t-att-class="o_grid_layout">
+                            <strong>Fiscal Folio:</strong>
+                            <p t-esc="o.fiscal_folio"/>
+                        </div>
+                    </t>
+                </t>
+            </xpath>
+        </template>
+    </data>
+</odoo>
