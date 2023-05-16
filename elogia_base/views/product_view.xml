@@ -1,0 +1,56 @@
+<odoo>
+  <data>
+<!--Brand tree view-->
+    <record model="ir.ui.view" id="list_elogia_brand">
+      <field name="name">Brand list</field>
+      <field name="model">product.brand</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="description"/>
+        </tree>
+      </field>
+    </record>
+
+<!--Brand form view-->
+    <record model="ir.ui.view" id="form_elogia_brand">
+      <field name="name">Brand form</field>
+      <field name="model">product.brand</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <field name="name"/>
+              <field name="description"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+<!--Brand Action -->
+    <record model="ir.actions.act_window" id="action_elogia_brand">
+      <field name="name">Brand window</field>
+      <field name="res_model">product.brand</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+<!-- Brand Menu -->
+    <menuitem name="Brands" id="menu_brand" parent="sale.menu_sales_config"
+              action="action_elogia_brand"/>
+
+
+<!-- Inherit Brand field integration-->
+    <record id="elogia_product_template_form_view_inherit" model="ir.ui.view">
+      <field name="name">Product Template inherit</field>
+      <field name="model">product.template</field>
+      <field name="inherit_id" ref="product.product_template_form_view"/>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='company_id' and @groups='base.group_multi_company']" position="after">
+          <field name="brand_id"/>
+        </xpath>
+      </field>
+    </record>
+
+  </data>
+</odoo>
