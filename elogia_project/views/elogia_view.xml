@@ -1,0 +1,284 @@
+<odoo>
+    <data>
+        <!-- View form inherit project.project-->
+        <record model="ir.ui.view" id="view_edit_project_form_inherited_elogia">
+            <field name="name">view.edit.project.form.inherited.elogia</field>
+            <field name="inherit_id" ref="sale_project.view_edit_project_inherit_form"/>
+            <field name="model">project.project</field>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='group_sales_invoicing']" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+                <xpath expr="//field[@name='tag_ids']" position="after">
+                    <field name="department_id" options="{'no_quick_create': True, 'no_create': True}"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_project_form_inherited_elogia">
+            <field name="name">view.project.form.inherited.elogia</field>
+            <field name="inherit_id" ref="project.view_project"/>
+            <field name="model">project.project</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='company_id']" position="before">
+                    <field name="department_id" optional="show"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- View form inherit account.analytic.line-->
+        <record model="ir.ui.view" id="view_account_analytic_line_form_inherited_elogia">
+            <field name="name">view.account.analytic.line.form.inherited.elogia</field>
+            <field name="inherit_id" ref="analytic.view_account_analytic_line_form"/>
+            <field name="model">account.analytic.line</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="type_note" required="True" readonly="True"/>
+                </xpath>
+                <xpath expr="//group[@name='analytic_item']/field[@name='company_id']" position="before">
+                    <field name="employee_id" attrs="{'readonly':[('type_note','=','aut')]}"/>
+                    <field name="employee_contact_id" attrs="{'readonly':[('type_note','=','aut')]}"
+                           options="{'no_create': True}"/>
+                </xpath>
+                <xpath expr="//field[@name='account_id']" position="after">
+                    <field name="department_account_id" attrs="{'readonly':[('type_note','=','aut')]}"/>
+                </xpath>
+                <xpath expr="//field[@name='account_id']" position="attributes">
+                    <attribute name="attrs">{'readonly': [('type_note', '=', 'aut')]}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='date']" position="attributes">
+                    <attribute name="attrs">{'readonly': [('type_note', '=', 'aut')]}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='amount']" position="attributes">
+                    <attribute name="attrs">{'readonly': [('type_note', '=', 'aut')]}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='unit_amount']" position="attributes">
+                    <attribute name="attrs">{'readonly': [('type_note', '=', 'aut')]}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='product_uom_id']" position="attributes">
+                    <attribute name="attrs">{'readonly': [('type_note', '=', 'aut')]}</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_account_analytic_line_form_inherited_account_elogia">
+            <field name="name">view.account.analytic.line.form.inherited.account.elogia</field>
+            <field name="inherit_id" ref="account.view_account_analytic_line_form_inherit_account"/>
+            <field name="model">account.analytic.line</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='ref']" position="attributes">
+                    <attribute name="attrs">{'readonly': [('type_note', '=', 'aut')]}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='partner_id']" position="attributes">
+                    <attribute name="attrs">{'readonly': [('type_note', '=', 'aut')]}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='product_id']" position="attributes">
+                    <attribute name="attrs">{'readonly': [('type_note', '=', 'aut')]}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='product_id']" position="after">
+                    <field name="product_analytic_id"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- View tree inherit account.analytic.line-->
+        <record model="ir.ui.view" id="view_account_analytic_line_tree_inherited_elogia">
+            <field name="name">view.account.analytic.line.tree.inherited.elogia</field>
+            <field name="inherit_id" ref="analytic.view_account_analytic_line_tree"/>
+            <field name="model">account.analytic.line</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="type_note" optional="show"/>
+                </xpath>
+                <xpath expr="//field[@name='account_id']" position="after">
+                    <field name="department_account_id" optional="show"/>
+                </xpath>
+                <xpath expr="//field[@name='product_id']" position="before">
+                    <field name="employee_id" optional="show"/>
+                    <field name="employee_contact_id" optional="show"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_account_analytic_line_tree_inherited_account_elogia">
+            <field name="name">view.account.analytic.line.tree.inherited.account.elogia</field>
+            <field name="inherit_id" ref="account.view_account_analytic_line_tree_inherit_account"/>
+            <field name="model">account.analytic.line</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='product_id']" position="after">
+                    <field name="product_analytic_id" optional="hide"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="project_project_view_form_simplified_inherit_elogia" model="ir.ui.view">
+            <field name="name">project.project.view.form.simplified.inherit.elogia</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="sale_timesheet.project_project_view_form_simplified_inherit"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[hasclass('o_setting_box')][last()-1]" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="project.open_create_project" model="ir.actions.act_window">
+            <field name="context">{"default_allow_billable": 0}</field>
+        </record>
+
+        <!-- Wizard View Form copy.month.wizard -->
+        <record model="ir.ui.view" id="copy_month_wizard_form">
+            <field name="name">Copy month wizard</field>
+            <field name="model">copy.month.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Copy previously month">
+                    <h5>Planning</h5>
+                    <field name="start_datetime" invisible="True"/>
+                    <field name="end_datetime" invisible="True"/>
+                    <field name="slot_ids">
+                        <tree edit="false" create="false" delete="false">
+                            <field name="resource_id"/>
+                            <field name="role_id"/>
+                            <field name="project_id"/>
+                            <field name="start_datetime"/>
+                            <field name="end_datetime"/>
+                            <field name="company_id" optional="hide"/>
+                            <field name="allocated_hours" optional="hide"/>
+                            <field name="allocated_percentage" optional="hide"/>
+                            <field name="name" optional="hide"/>
+                            <field name="state" optional="hide"/>
+                        </tree>
+                    </field>
+                    <h5>Warnings</h5>
+                        <field name="more_info" readonly="True"/>
+                    <footer>
+                        <button type="object" name="action_copy_previous_month" string="Copy Month" class="oe_highlight"/>
+                        <button special="cancel" string="Cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="planning_copy_month_action" model="ir.actions.act_window">
+            <field name="name">Copy Previously Month</field>
+            <field name="res_model">copy.month.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <!-- View form inherit project.task-->
+        <record model="ir.ui.view" id="project_view_task_form2_inherited_elogia">
+            <field name="name">project.view.task.form2.inherited.elogia</field>
+            <field name="inherit_id" ref="project.view_task_form2"/>
+            <field name="model">project.task</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='user_ids']" position="after">
+                    <field name="action_user_id" options="{'no_open': True, 'no_quick_create': True, 'no_create': True}"/>
+                </xpath>
+                <xpath expr="//page[@name='extra_info']" position="attributes">
+                    <attribute name="groups">base.group_user</attribute>
+                </xpath>
+                <xpath expr="//field[@name='sequence']" position="attributes">
+                    <attribute name="groups">base.group_user</attribute>
+                </xpath>
+                <xpath expr="//field[@name='date_assign']" position="attributes">
+                    <attribute name="groups">base.group_user</attribute>
+                </xpath>
+                <xpath expr="//field[@name='date_last_stage_update']" position="attributes">
+                    <attribute name="groups">base.group_user</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- View tree inherit project.task-->
+        <record model="ir.ui.view" id="project_view_task_tree2_inherited_elogia">
+            <field name="name">project.view.task.tree2.inherited.elogia</field>
+            <field name="inherit_id" ref="project.view_task_tree2"/>
+            <field name="model">project.task</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="before">
+                    <field name="sequence"/>
+                </xpath>
+                <xpath expr="//field[@name='user_ids']" position="after">
+                    <field name="action_user_id" options="{'no_open': True, 'no_quick_create': True, 'no_create': True}"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- View kanban inherit project.task-->
+        <record model="ir.ui.view" id="project_view_task_kanban_inherited_elogia">
+            <field name="name">project.view.task.kanban.inherited.elogia</field>
+            <field name="inherit_id" ref="project.view_task_kanban"/>
+            <field name="model">project.task</field>
+            <field name="arch" type="xml">
+                <xpath expr="//strong[@class='o_kanban_record_title']" position="replace">
+                    <strong class="o_kanban_record_title">
+                        <s t-if="!record.active.raw_value">[<field name="sequence"/>] - <field name="name" widget="name_with_subtask_count"/></s>
+                        <t t-else="">[<field name="sequence"/>] - <field name="name" widget="name_with_subtask_count"/></t>
+                    </strong>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_sale_project_inherit_form_elogia">
+            <field name="name">view.sale.project.inherited.form.elogia</field>
+            <field name="inherit_id" ref="sale_project.view_sale_project_inherit_form"/>
+            <field name="model">project.task</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='sale_order_id']" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+                <xpath expr="//field[@name='sale_line_id']" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="planning_action_my_roles" model="ir.actions.act_window">
+            <field name="name">Roles/Hubs</field>
+            <field name="res_model">planning.role</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No hub found</p><p>
+                    Define the different hubs by your employees.
+                </p>
+            </field>
+        </record>
+
+        <!-- View pivot inherit planning.slot-->
+        <record id="planning_slot_report_view_elogia_pivot" model="ir.ui.view">
+            <field name="name">planning.slot.report.elogia.pivot</field>
+            <field name="inherit_id" ref="planning.planning_view_pivot"/>
+            <field name="model">planning.slot</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='allocated_hours']" position="before">
+                    <field name="hours_available" type="measure"/>
+                    <field name="total_hours" type="measure"/>
+                </xpath>
+            </field>
+        </record>
+
+
+        <record id="planning_slot_view_elogia_search" model="ir.ui.view">
+            <field name="name">planning.slot.view.elogia.search</field>
+            <field name="inherit_id" ref="planning.planning_view_search"/>
+            <field name="model">planning.slot</field>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@name='future']" position="after">
+                        <filter string="Current month" name="actual_month" domain="[
+                        ('start_datetime','&gt;=',(context_today() - relativedelta(months=0)).strftime('%Y-%m-01')),
+                        ('start_datetime','&lt;',(context_today() + relativedelta(months=1)).strftime('%Y-%m-01'))]"/>
+                </xpath>
+            </field>
+        </record>
+
+        <menuitem
+            id="planning.planning_menu_settings_role"
+            name="Role/Hub"
+            parent="planning.planning_menu_settings"
+            sequence="20"
+            action="planning_action_my_roles"
+            groups="planning.group_planning_manager"/>
+    </data>
+</odoo>

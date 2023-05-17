@@ -74,6 +74,7 @@
             </field>
         </record>
 
+
         <!-- View form inherit res.partner.category-->
         <record id="view_partner_category_form_inherit" model="ir.ui.view">
             <field name="name">view_partner_category_form_inherit</field>

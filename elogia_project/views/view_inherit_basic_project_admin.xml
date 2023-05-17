@@ -1,0 +1,19 @@
+<odoo>
+  <data>
+    <!-- inherit personalization form viw-->
+    <record id="form_custom_inherit" model="ir.ui.view">
+      <field name="name">Basic Admin Kanban</field>
+      <field name="model">project.project</field>
+      <field name="inherit_id" ref="project.view_project_kanban"/>
+      <field name="arch" type="xml">
+<!-- Replace Atributes -->
+        <xpath expr="//div[@class='o_kanban_card_manage_settings row']/div[last()-1]" position="attributes">
+          <attribute name="groups">project.group_project_manager, group_basic_admin_elogia</attribute>
+        </xpath>
+        <xpath expr="//div[@class='o_kanban_card_manage_settings row']/div[last()-1]/a[last()]" position="attributes">
+          <attribute name="groups">!elogia_project.group_basic_admin_elogia</attribute>
+        </xpath>
+      </field>
+    </record>
+  </data>
+</odoo>
