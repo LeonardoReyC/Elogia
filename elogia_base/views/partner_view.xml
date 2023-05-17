@@ -74,6 +74,20 @@
             </field>
         </record>
 
+
+        <!-- View form inherit res.partner.category-->
+        <record id="view_partner_category_form_inherit" model="ir.ui.view">
+            <field name="name">view_partner_category_form_inherit</field>
+            <field name="model">res.partner.category</field>
+            <field name="inherit_id" ref="base.view_partner_category_form"/>
+            <field name="arch" type="xml">
+            <!-- Added fields -->
+                <field name="active" position="after">
+                  <field name="auto_notify" widget="boolean_toggle"/>
+                </field>
+            </field>
+        </record>
+
         <!-- View inherit Form account.move-->
         <record id="view_move_form_inherit_elogia_base" model="ir.ui.view">
             <field name="name">account.move.form.inherit.elogia.base</field>

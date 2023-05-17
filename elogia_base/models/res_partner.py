@@ -90,6 +90,21 @@ class Partner(models.Model):
                                                        partner_label)
                 raise ValidationError(msg)
 
+    @api.constrains('category_id')
+    def _check_category_id(self):
+        for partner in self:
+            if partner.category_id and not partner.category_id.auto_notify:
+                partner.followup_reminder_type = 'manual'
+
+
+class PartnerCategory(models.Model):
+    _inherit = "res.partner.category"
+
+    auto_notify = fields.Boolean(
+        string="Follow-up Reports Notify",
+        default=True
+    )
+
 
 class Partner(models.Model):
     _inherit = "res.country"
