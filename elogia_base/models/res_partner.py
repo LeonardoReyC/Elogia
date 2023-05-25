@@ -93,8 +93,9 @@ class Partner(models.Model):
     @api.constrains('category_id')
     def _check_category_id(self):
         for partner in self:
-            if partner.category_id and not partner.category_id.auto_notify:
-                partner.followup_reminder_type = 'manual'
+            if partner.category_id:
+                partner.followup_reminder_type = 'manual' if any(
+                    not category.auto_notify for category in partner.category_id) else 'automatic'
 
 
 class PartnerCategory(models.Model):
